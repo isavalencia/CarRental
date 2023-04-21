@@ -191,7 +191,7 @@ namespace Car
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultaReservas";
             this.Text = "ConsultaAlquileres";
-            this.Load += new System.EventHandler(this.ConsultaAlquileres_Load);
+            this.Load += new System.EventHandler(this.ConsultaReservas_Load);
             this.panelTituloConsultaReservas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

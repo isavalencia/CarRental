@@ -205,5 +205,10 @@ namespace Car
                 }                
           
         }
+
+        private void ConsultaReservas_Load(object sender, EventArgs e)
+        {
+            ListarReservas();
+        }
     }
 }

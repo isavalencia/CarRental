@@ -90,7 +90,7 @@ namespace Car.Clases
         {
             DataTable tabla = new DataTable();
             comando.Connection = Conexion.Conectar();
-            comando.CommandText = "ListarAlquileres";
+            comando.CommandText = "MostrarAlquilers";
             comando.CommandType = CommandType.StoredProcedure;
             leerfilas = comando.ExecuteReader();
             tabla.Load(leerfilas);

@@ -62,64 +62,32 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Empleados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Empleados.Designer.cs">
-      <DependentUpon>Empleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CDatosAlquiler.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="Clases\Alquileres.cs" />
+    <Compile Include="Clases\Reserva.cs" />
     <Compile Include="ConsultaAlquileres.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultaAlquileres.Designer.cs">
       <DependentUpon>ConsultaAlquileres.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaReservas.Designer.cs">
+      <DependentUpon>ConsultaReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\alquilere.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\cliente.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\contrato.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\empleado.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\entrega.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\ModelyalexRenta.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelyalexRenta.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\ModelyalexRenta.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\ModelyalexRenta.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelyalexRenta.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\reserva.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sysdiagram.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\vehiculo.cs">
-      <DependentUpon>ModelyalexRenta.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,11 +97,40 @@
     <Compile Include="Registro Alquiler.Designer.cs">
       <DependentUpon>Registro Alquiler.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroReservas.Designer.cs">
+      <DependentUpon>RegistroReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yalexrentaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yalexrentaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="yalexrentaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yalexrentaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="yalexrentaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yalexrentaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="yalexrentaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yalexrentaDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaAlquileres.resx">
       <DependentUpon>ConsultaAlquileres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaReservas.resx">
+      <DependentUpon>ConsultaReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
@@ -153,13 +150,9 @@
     <EmbeddedResource Include="Registro Alquiler.resx">
       <DependentUpon>Registro Alquiler.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Modelo\ModelyalexRenta.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelyalexRenta.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Modelo\ModelyalexRenta.edmx.diagram">
-      <DependentUpon>ModelyalexRenta.edmx</DependentUpon>
-    </None>
+    <EmbeddedResource Include="RegistroReservas.resx">
+      <DependentUpon>RegistroReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -170,6 +163,50 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="yalexrentaDataSet.xsc">
+      <DependentUpon>yalexrentaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="yalexrentaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yalexrentaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yalexrentaDataSet.xss">
+      <DependentUpon>yalexrentaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="yalexrentaDataSet1.xsc">
+      <DependentUpon>yalexrentaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="yalexrentaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yalexrentaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yalexrentaDataSet1.xss">
+      <DependentUpon>yalexrentaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="yalexrentaDataSet2.xsc">
+      <DependentUpon>yalexrentaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="yalexrentaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yalexrentaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yalexrentaDataSet2.xss">
+      <DependentUpon>yalexrentaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="yalexrentaDataSet3.xsc">
+      <DependentUpon>yalexrentaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="yalexrentaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yalexrentaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yalexrentaDataSet3.xss">
+      <DependentUpon>yalexrentaDataSet3.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -177,17 +214,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Modelo\ModelyalexRenta.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelyalexRenta.edmx</DependentUpon>
-      <LastGenOutput>ModelyalexRenta.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Modelo\ModelyalexRenta.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelyalexRenta.edmx</DependentUpon>
-      <LastGenOutput>ModelyalexRenta.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

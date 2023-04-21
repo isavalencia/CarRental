@@ -37,11 +37,11 @@ namespace Car
             this.label2 = new System.Windows.Forms.Label();
             this.panelTituloLogin = new System.Windows.Forms.Panel();
             this.btnMinim = new System.Windows.Forms.Button();
+            this.btnMaxi = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.pbOcultar = new System.Windows.Forms.PictureBox();
             this.pbMostrar = new System.Windows.Forms.PictureBox();
-            this.btnMaxi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTituloLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultar)).BeginInit();
@@ -108,7 +108,7 @@ namespace Car
             this.panelTituloLogin.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTituloLogin.Location = new System.Drawing.Point(0, 0);
             this.panelTituloLogin.Name = "panelTituloLogin";
-            this.panelTituloLogin.Size = new System.Drawing.Size(502, 28);
+            this.panelTituloLogin.Size = new System.Drawing.Size(486, 28);
             this.panelTituloLogin.TabIndex = 5;
             this.panelTituloLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panelTituloLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTituloLogin_MouseMove);
@@ -120,12 +120,26 @@ namespace Car
             this.btnMinim.FlatAppearance.BorderSize = 0;
             this.btnMinim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinim.Image = ((System.Drawing.Image)(resources.GetObject("btnMinim.Image")));
-            this.btnMinim.Location = new System.Drawing.Point(372, 0);
+            this.btnMinim.Location = new System.Drawing.Point(356, 0);
             this.btnMinim.Name = "btnMinim";
             this.btnMinim.Size = new System.Drawing.Size(47, 28);
             this.btnMinim.TabIndex = 7;
             this.btnMinim.UseVisualStyleBackColor = false;
             this.btnMinim.Click += new System.EventHandler(this.btnMinim_Click);
+            // 
+            // btnMaxi
+            // 
+            this.btnMaxi.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaxi.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaxi.FlatAppearance.BorderSize = 0;
+            this.btnMaxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaxi.Image = ((System.Drawing.Image)(resources.GetObject("btnMaxi.Image")));
+            this.btnMaxi.Location = new System.Drawing.Point(403, 0);
+            this.btnMaxi.Name = "btnMaxi";
+            this.btnMaxi.Size = new System.Drawing.Size(44, 28);
+            this.btnMaxi.TabIndex = 9;
+            this.btnMaxi.UseVisualStyleBackColor = false;
+            this.btnMaxi.Click += new System.EventHandler(this.btnMaxi_Click);
             // 
             // btnCerrar
             // 
@@ -134,7 +148,7 @@ namespace Car
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(463, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(447, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(39, 28);
             this.btnCerrar.TabIndex = 7;
@@ -176,26 +190,12 @@ namespace Car
             this.pbMostrar.TabStop = false;
             this.pbMostrar.Click += new System.EventHandler(this.pbMostrar_Click);
             // 
-            // btnMaxi
-            // 
-            this.btnMaxi.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaxi.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMaxi.FlatAppearance.BorderSize = 0;
-            this.btnMaxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaxi.Image = ((System.Drawing.Image)(resources.GetObject("btnMaxi.Image")));
-            this.btnMaxi.Location = new System.Drawing.Point(419, 0);
-            this.btnMaxi.Name = "btnMaxi";
-            this.btnMaxi.Size = new System.Drawing.Size(44, 28);
-            this.btnMaxi.TabIndex = 9;
-            this.btnMaxi.UseVisualStyleBackColor = false;
-            this.btnMaxi.Click += new System.EventHandler(this.btnMaxi_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(502, 437);
+            this.ClientSize = new System.Drawing.Size(486, 437);
             this.Controls.Add(this.pbMostrar);
             this.Controls.Add(this.pbOcultar);
             this.Controls.Add(this.btnIniciar);

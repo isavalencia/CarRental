@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Car
@@ -130,7 +124,7 @@ namespace Car
 
         private void btnMaxi_Click(object sender, EventArgs e)
         {
-            if(this.WindowState == FormWindowState.Normal)
+            if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
@@ -163,7 +157,7 @@ namespace Car
 
         private void btnRegistroAlquiler_Click(object sender, EventArgs e)
         {
-            Registro_Alquiler alquiler = new  Registro_Alquiler();
+            Registro_Alquiler alquiler = new Registro_Alquiler();
             alquiler.Show();
             this.Close();
         }
@@ -172,6 +166,20 @@ namespace Car
         {
             ConsultaAlquileres consualqui = new ConsultaAlquileres();
             consualqui.Show();
+            this.Close();
+        }
+
+        private void btnConsultaReservas_Click(object sender, EventArgs e)
+        {
+            ConsultaReservas consureserva = new ConsultaReservas();
+            consureserva.Show();
+            this.Close();
+        }
+
+        private void btnRegistroReserva_Click(object sender, EventArgs e)
+        {
+            RegistroReservas reserva = new RegistroReservas();
+            reserva.Show();
             this.Close();
         }
     }

@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Car
 {
@@ -26,7 +20,7 @@ namespace Car
                 SqlCommand cmd = new SqlCommand("SELECT nombre, tipo_empleado FROM empleado WHERE usuario = @usuario AND contrasena = @pas", Conexion.Conectar()); ;
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("pas", contrasena);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd); 
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
@@ -37,7 +31,8 @@ namespace Car
                     {
                         new Administrador(dt.Rows[0][0].ToString()).Show();
 
-                    } else if (dt.Rows[0][1].ToString() == "Empleado")
+                    }
+                    else if (dt.Rows[0][1].ToString() == "Empleado")
                     {
                         new Empleados(dt.Rows[0][0].ToString()).Show();
                     }
@@ -47,7 +42,7 @@ namespace Car
                     MessageBox.Show("Usuario y/o Contraseña Incorrecta");
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
@@ -62,8 +57,8 @@ namespace Car
             logear(this.txtUser.Text, this.txtPass.Text);
 
 
-           /*Conexion.Conectar();
-           MessageBox.Show("Conexion realizada con exito");*/
+            /*Conexion.Conectar();
+            MessageBox.Show("Conexion realizada con exito");*/
         }
 
         private void pbMostrar_Click(object sender, EventArgs e)
@@ -90,12 +85,12 @@ namespace Car
 
         private void btnMinim_Click(object sender, EventArgs e)
         {
-           this.WindowState = FormWindowState.Minimized; 
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnMaxi_Click(object sender, EventArgs e)
         {
-            if(this.WindowState == FormWindowState.Normal)
+            if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
@@ -103,13 +98,13 @@ namespace Car
             {
                 this.WindowState = FormWindowState.Normal;
             }
-            
+
         }
 
-       
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         int posY = 0;

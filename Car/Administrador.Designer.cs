@@ -357,13 +357,13 @@ namespace Car
             this.btnRegistroReserva.FlatAppearance.BorderSize = 0;
             this.btnRegistroReserva.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRegistroReserva.Location = new System.Drawing.Point(0, 0);
+            this.btnRegistroReserva.Location = new System.Drawing.Point(-1, 0);
             this.btnRegistroReserva.Name = "btnRegistroReserva";
             this.btnRegistroReserva.Size = new System.Drawing.Size(181, 49);
             this.btnRegistroReserva.TabIndex = 37;
             this.btnRegistroReserva.Text = "Registro de Reserva";
             this.btnRegistroReserva.UseVisualStyleBackColor = false;
-            this.btnRegistroReserva.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegistroReserva.Click += new System.EventHandler(this.btnRegistroReserva_Click);
             // 
             // panelAlquileres
             // 
@@ -529,6 +529,7 @@ namespace Car
             this.btnConsultaReservas.TabIndex = 39;
             this.btnConsultaReservas.Text = "Consulta de Reservas";
             this.btnConsultaReservas.UseVisualStyleBackColor = false;
+            this.btnConsultaReservas.Click += new System.EventHandler(this.btnConsultaReservas_Click);
             // 
             // btnConsultaAlquiler
             // 

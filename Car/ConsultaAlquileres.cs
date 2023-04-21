@@ -1,13 +1,14 @@
-﻿using Car.Modelo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Car.Clases;
 
 namespace Car
 {
@@ -18,14 +19,62 @@ namespace Car
             InitializeComponent();
         }
 
-        CDatosAlquiler datosAlquiler = new CDatosAlquiler();
-        alquilere alquilere = new alquilere();
-        private int id_alquiler;
+        Alquileres alquiler = new Alquileres();
+        string operacion = "";
+        //string operacion = "";
+        public string id_alquiler;
 
-        private void CargarGrid()
+
+        int posY = 0;
+        int posX = 0;
+        private void panelTituloConsultaAlquileres_MouseMove(object sender, MouseEventArgs e)
         {
-            var Lst = datosAlquiler.Read();
-            dgvCAlquileres.DataSource = Lst;
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //RegistroEdicionReservas 
+            if (dgvAlquileres.SelectedRows.Count > 0)
+            {
+
+                Registro_Alquiler editalqui= new Registro_Alquiler();
+                editalqui.operacion = "editar";
+                editalqui.ListarClientes();
+                editalqui.ListarConVehiculo();
+                editalqui.ListarEstadoAlquiler();
+                editalqui.id_alquiler = dgvAlquileres.CurrentRow.Cells[0].Value.ToString();
+                editalqui.cbxCliente.Text = dgvAlquileres.CurrentRow.Cells[1].Value.ToString();
+                editalqui.dtpFechaIniAlquiler.Text = dgvAlquileres.CurrentRow.Cells[5].Value.ToString();
+                editalqui.dtpFechaFinaliAlquiler.Text = dgvAlquileres.CurrentRow.Cells[6].Value.ToString();
+                editalqui.txtCostoAlqui.Text = dgvAlquileres.CurrentRow.Cells[2].Value.ToString();
+                editalqui.cbxCVehiculo.Text = dgvAlquileres.CurrentRow.Cells[4].Value.ToString();
+                editalqui.cbxEstadoAl.Text = dgvAlquileres.CurrentRow.Cells[3].Value.ToString();             
+
+
+                editalqui.ShowDialog();
+                ListarAlquileres();
+
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila");
+            }
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -45,7 +94,6 @@ namespace Car
             {
                 this.WindowState = FormWindowState.Normal;
             }
-
         }
 
         private void btnMinim_Click(object sender, EventArgs e)
@@ -53,31 +101,46 @@ namespace Car
             this.WindowState = FormWindowState.Minimized;
         }
 
-        int posY = 0;
-        int posX = 0;
-
-        private void panelTituloConsultaAlquiler_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button != MouseButtons.Left)
-            {
-                posX = e.X;
-                posY = e.Y;
-            }
-            else
-            {
-                Left = Left + (e.X - posX);
-                Top = Top + (e.Y - posY);
-            }
-        }
-
         private void ConsultaAlquileres_Load(object sender, EventArgs e)
         {
-            CargarGrid();
+
+            ListarAlquileres();
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void ListarAlquileres()
         {
+            Alquileres mostrar = new Alquileres();
+            dgvAlquileres.DataSource = mostrar.ListarAlquileres();
+        }
 
+        private void btnNuevoAlquiler_Click(object sender, EventArgs e)
+        {
+            Registro_Alquiler alquiler = new Registro_Alquiler();
+            alquiler.operacion = "insertar";
+            alquiler.ListarClientes();
+            alquiler.ListarEstadoAlquiler();
+            alquiler.ListarConVehiculo();
+            alquiler.ShowDialog();
+            ListarAlquileres();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            String dato = "%" + txtBuscar.Text + "%";
+            buscarAlquiler(dato);
+        }
+        private void buscarAlquiler(string dato)
+        {
+            SqlCommand comando = Conexion.Conectar().CreateCommand();
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "select * from alquileres where id_alquiler like ('" + txtBuscar.Text + "%') ";
+            comando.ExecuteNonQuery();
+            DataTable alquiler = new DataTable();
+            SqlDataAdapter data = new SqlDataAdapter(comando);
+            data.Fill(alquiler);
+            dgvAlquileres.DataSource = alquiler;
+            Conexion.Conectar().Close();
         }
     }
 }

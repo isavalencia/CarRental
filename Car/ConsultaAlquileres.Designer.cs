@@ -30,34 +30,33 @@ namespace Car
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaAlquileres));
-            this.panelTituloConsultaAlquiler = new System.Windows.Forms.Panel();
+            this.panelTituloConsultaAlquileres = new System.Windows.Forms.Panel();
             this.btnMinim = new System.Windows.Forms.Button();
             this.btnMaxi = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.dgvCAlquileres = new System.Windows.Forms.DataGridView();
-            this.btnEditarAlqui = new System.Windows.Forms.Button();
-            this.bntEliminarAlqui = new System.Windows.Forms.Button();
-            this.btnNuevoAlqui = new System.Windows.Forms.Button();
-            this.txtBuscarAlqui = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnNuevoAlquiler = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.dgvAlquileres = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelTituloConsultaAlquiler.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCAlquileres)).BeginInit();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.panelTituloConsultaAlquileres.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelTituloConsultaAlquiler
+            // panelTituloConsultaAlquileres
             // 
-            this.panelTituloConsultaAlquiler.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.panelTituloConsultaAlquiler.Controls.Add(this.btnMinim);
-            this.panelTituloConsultaAlquiler.Controls.Add(this.btnMaxi);
-            this.panelTituloConsultaAlquiler.Controls.Add(this.btnCerrar);
-            this.panelTituloConsultaAlquiler.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTituloConsultaAlquiler.Location = new System.Drawing.Point(0, 0);
-            this.panelTituloConsultaAlquiler.Name = "panelTituloConsultaAlquiler";
-            this.panelTituloConsultaAlquiler.Size = new System.Drawing.Size(1119, 28);
-            this.panelTituloConsultaAlquiler.TabIndex = 66;
-            this.panelTituloConsultaAlquiler.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTituloConsultaAlquiler_MouseMove);
+            this.panelTituloConsultaAlquileres.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.panelTituloConsultaAlquileres.Controls.Add(this.btnMinim);
+            this.panelTituloConsultaAlquileres.Controls.Add(this.btnMaxi);
+            this.panelTituloConsultaAlquileres.Controls.Add(this.btnCerrar);
+            this.panelTituloConsultaAlquileres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTituloConsultaAlquileres.Location = new System.Drawing.Point(0, 0);
+            this.panelTituloConsultaAlquileres.Name = "panelTituloConsultaAlquileres";
+            this.panelTituloConsultaAlquileres.Size = new System.Drawing.Size(1073, 28);
+            this.panelTituloConsultaAlquileres.TabIndex = 67;
+            this.panelTituloConsultaAlquileres.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelTituloConsultaAlquileres_MouseMove);
             // 
             // btnMinim
             // 
@@ -66,7 +65,7 @@ namespace Car
             this.btnMinim.FlatAppearance.BorderSize = 0;
             this.btnMinim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinim.Image = ((System.Drawing.Image)(resources.GetObject("btnMinim.Image")));
-            this.btnMinim.Location = new System.Drawing.Point(989, 0);
+            this.btnMinim.Location = new System.Drawing.Point(943, 0);
             this.btnMinim.Name = "btnMinim";
             this.btnMinim.Size = new System.Drawing.Size(47, 28);
             this.btnMinim.TabIndex = 7;
@@ -80,7 +79,7 @@ namespace Car
             this.btnMaxi.FlatAppearance.BorderSize = 0;
             this.btnMaxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaxi.Image = ((System.Drawing.Image)(resources.GetObject("btnMaxi.Image")));
-            this.btnMaxi.Location = new System.Drawing.Point(1036, 0);
+            this.btnMaxi.Location = new System.Drawing.Point(990, 0);
             this.btnMaxi.Name = "btnMaxi";
             this.btnMaxi.Size = new System.Drawing.Size(44, 28);
             this.btnMaxi.TabIndex = 9;
@@ -94,116 +93,107 @@ namespace Car
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(1080, 0);
+            this.btnCerrar.Location = new System.Drawing.Point(1034, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(39, 28);
             this.btnCerrar.TabIndex = 7;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // dgvCAlquileres
+            // btnNuevoAlquiler
             // 
-            this.dgvCAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCAlquileres.Location = new System.Drawing.Point(12, 121);
-            this.dgvCAlquileres.Name = "dgvCAlquileres";
-            this.dgvCAlquileres.Size = new System.Drawing.Size(936, 356);
-            this.dgvCAlquileres.TabIndex = 67;
+            this.btnNuevoAlquiler.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnNuevoAlquiler.Font = new System.Drawing.Font("Berlin Sans FB Demi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoAlquiler.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnNuevoAlquiler.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlquiler.Image")));
+            this.btnNuevoAlquiler.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoAlquiler.Location = new System.Drawing.Point(12, 97);
+            this.btnNuevoAlquiler.Name = "btnNuevoAlquiler";
+            this.btnNuevoAlquiler.Size = new System.Drawing.Size(195, 46);
+            this.btnNuevoAlquiler.TabIndex = 69;
+            this.btnNuevoAlquiler.Text = "Nueva Reserva";
+            this.btnNuevoAlquiler.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoAlquiler.UseVisualStyleBackColor = false;
+            this.btnNuevoAlquiler.Click += new System.EventHandler(this.btnNuevoAlquiler_Click);
             // 
-            // btnEditarAlqui
+            // btnEliminar
             // 
-            this.btnEditarAlqui.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnEditarAlqui.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.btnEditarAlqui.FlatAppearance.BorderSize = 0;
-            this.btnEditarAlqui.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarAlqui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditarAlqui.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarAlqui.Image")));
-            this.btnEditarAlqui.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarAlqui.Location = new System.Drawing.Point(963, 121);
-            this.btnEditarAlqui.Name = "btnEditarAlqui";
-            this.btnEditarAlqui.Size = new System.Drawing.Size(144, 40);
-            this.btnEditarAlqui.TabIndex = 68;
-            this.btnEditarAlqui.Text = "Editar";
-            this.btnEditarAlqui.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEliminar.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(915, 232);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(146, 46);
+            this.btnEliminar.TabIndex = 72;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // bntEliminarAlqui
+            // btnEditar
             // 
-            this.bntEliminarAlqui.BackColor = System.Drawing.SystemColors.Highlight;
-            this.bntEliminarAlqui.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.bntEliminarAlqui.FlatAppearance.BorderSize = 0;
-            this.bntEliminarAlqui.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntEliminarAlqui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bntEliminarAlqui.Image = ((System.Drawing.Image)(resources.GetObject("bntEliminarAlqui.Image")));
-            this.bntEliminarAlqui.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntEliminarAlqui.Location = new System.Drawing.Point(963, 183);
-            this.bntEliminarAlqui.Name = "bntEliminarAlqui";
-            this.bntEliminarAlqui.Size = new System.Drawing.Size(144, 40);
-            this.bntEliminarAlqui.TabIndex = 69;
-            this.bntEliminarAlqui.Text = "Eliminar";
-            this.bntEliminarAlqui.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEditar.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(915, 165);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(146, 46);
+            this.btnEditar.TabIndex = 71;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnNuevoAlqui
+            // dgvAlquileres
             // 
-            this.btnNuevoAlqui.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnNuevoAlqui.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.btnNuevoAlqui.FlatAppearance.BorderSize = 0;
-            this.btnNuevoAlqui.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoAlqui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnNuevoAlqui.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoAlqui.Image")));
-            this.btnNuevoAlqui.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoAlqui.Location = new System.Drawing.Point(12, 75);
-            this.btnNuevoAlqui.Name = "btnNuevoAlqui";
-            this.btnNuevoAlqui.Size = new System.Drawing.Size(210, 40);
-            this.btnNuevoAlqui.TabIndex = 70;
-            this.btnNuevoAlqui.Text = "Nuevo Alquiler";
-            this.btnNuevoAlqui.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscarAlqui
-            // 
-            this.txtBuscarAlqui.Location = new System.Drawing.Point(710, 95);
-            this.txtBuscarAlqui.Name = "txtBuscarAlqui";
-            this.txtBuscarAlqui.Size = new System.Drawing.Size(238, 20);
-            this.txtBuscarAlqui.TabIndex = 71;
-            this.txtBuscarAlqui.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(264, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 25);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "CONSULTA ALQUILERES";
+            this.dgvAlquileres.AllowUserToAddRows = false;
+            this.dgvAlquileres.AllowUserToDeleteRows = false;
+            this.dgvAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlquileres.Location = new System.Drawing.Point(12, 149);
+            this.dgvAlquileres.Name = "dgvAlquileres";
+            this.dgvAlquileres.ReadOnly = true;
+            this.dgvAlquileres.Size = new System.Drawing.Size(896, 361);
+            this.dgvAlquileres.TabIndex = 73;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(928, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(884, 123);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabIndex = 75;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(675, 127);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(203, 20);
+            this.txtBuscar.TabIndex = 76;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // ConsultaAlquileres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 500);
+            this.ClientSize = new System.Drawing.Size(1073, 522);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtBuscarAlqui);
-            this.Controls.Add(this.btnNuevoAlqui);
-            this.Controls.Add(this.bntEliminarAlqui);
-            this.Controls.Add(this.btnEditarAlqui);
-            this.Controls.Add(this.dgvCAlquileres);
-            this.Controls.Add(this.panelTituloConsultaAlquiler);
+            this.Controls.Add(this.dgvAlquileres);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnNuevoAlquiler);
+            this.Controls.Add(this.panelTituloConsultaAlquileres);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultaAlquileres";
             this.Text = "ConsultaAlquileres";
             this.Load += new System.EventHandler(this.ConsultaAlquileres_Load);
-            this.panelTituloConsultaAlquiler.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCAlquileres)).EndInit();
+            this.panelTituloConsultaAlquileres.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -212,16 +202,15 @@ namespace Car
 
         #endregion
 
-        private System.Windows.Forms.Panel panelTituloConsultaAlquiler;
+        private System.Windows.Forms.Panel panelTituloConsultaAlquileres;
         private System.Windows.Forms.Button btnMinim;
         private System.Windows.Forms.Button btnMaxi;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.DataGridView dgvCAlquileres;
-        private System.Windows.Forms.Button btnEditarAlqui;
-        private System.Windows.Forms.Button bntEliminarAlqui;
-        private System.Windows.Forms.Button btnNuevoAlqui;
-        private System.Windows.Forms.TextBox txtBuscarAlqui;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnNuevoAlquiler;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.DataGridView dgvAlquileres;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox txtBuscar;
     }
 }

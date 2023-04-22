@@ -63,5 +63,12 @@ namespace Car
             else
                 panelAcercaDe.Visible = false;
         }
+
+        private void btnConsultaContratos_Click(object sender, EventArgs e)
+        {
+            ContratoEmpleado emple = new ContratoEmpleado();
+            emple.Show();
+            this.Hide();
+        }
     }
 }

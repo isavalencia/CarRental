@@ -4,12 +4,6 @@ using System.Data;
 using Car.Clases;
 using System;
 
-
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.tool.xml;
-using System.IO; //guadado de archivos
-
 namespace Car
 {
     public partial class ConsultaReservas : Form
@@ -20,13 +14,12 @@ namespace Car
         }
 
         Reserva reserva = new Reserva();
-        string operacion = "";
+         string operacion = "";
         //string operacion = "";
         public string id_reserva;
-        //public string DateTime;
         private void panelTituloRegistroAlquiler_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void btnCerrar_Click(object sender, System.EventArgs e)
@@ -36,15 +29,15 @@ namespace Car
             admin.Show();
         }
 
-
+        
         private void panelTituloRegistroAlquiler_MouseHover(object sender, System.EventArgs e)
         {
 
         }
-
+        
         private void panelTituloRegistroAlquiler_MouseMove(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         private void btnMaxi_Click(object sender, System.EventArgs e)
@@ -87,7 +80,7 @@ namespace Car
             }
         }
 
-
+        
         private void btnEditar_Click(object sender, System.EventArgs e)
         {
 
@@ -120,7 +113,7 @@ namespace Car
 
         private void txtBuscar_TextChanged(object sender, System.EventArgs e)
         {
-            String dato = "%" + txtBuscar.Text + "%";
+            String dato = "%"+txtBuscar.Text+"%";
             buscarReserva(dato);
         }
 
@@ -136,7 +129,7 @@ namespace Car
             dgvReservas.DataSource = reserva;
             Conexion.Conectar().Close();
         }
-
+        
 
         private void btnBuscar_Click(object sender, System.EventArgs e)
         {
@@ -183,7 +176,7 @@ namespace Car
             reservas.ShowDialog();
             ListarReservas();
 
-
+            
 
         }
 
@@ -195,33 +188,22 @@ namespace Car
 
         private void btnEliminar_Click(object sender, System.EventArgs e)
         {
-
-
-            if (dgvReservas.SelectedRows.Count > 0)
-            {
-                //if()
-                //MessageBox.Show("Esta seguro que quiere eliminar el registro?");
-                reserva.Id_reserva = Convert.ToInt32(dgvReservas.CurrentRow.Cells[0].Value);
-                reserva.eliminarReserva();
-                MessageBox.Show("Se elimino satisfactoriamente");
-                ListarReservas();
-            }
-            else
-            {
-                MessageBox.Show("Seleccione una fila");
-            }
-
-        }
-
-        private void ConsultaReservas_Load(object sender, EventArgs e)
-        {
-            ListarReservas();
-        }
-
-        private void btnReporteReserva_Click(object sender, EventArgs e)
-        {
-
-
+            
+           
+                if (dgvReservas.SelectedRows.Count > 0)
+                {
+                    //if()
+                    //MessageBox.Show("Esta seguro que quiere eliminar el registro?");
+                    reserva.Id_reserva = Convert.ToInt32(dgvReservas.CurrentRow.Cells[0].Value);
+                    reserva.eliminarReserva();
+                    MessageBox.Show("Se elimino satisfactoriamente");
+                    ListarReservas();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione una fila");
+                }                
+          
         }
     }
 }

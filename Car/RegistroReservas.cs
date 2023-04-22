@@ -17,7 +17,7 @@ namespace Car
     {
         Reserva reserva = new Reserva();
         //public string operacion = "insertar";
-        // string idreserva;
+       // string idreserva;
         public RegistroReservas()
         {
             InitializeComponent();
@@ -68,14 +68,14 @@ namespace Car
             this.WindowState = FormWindowState.Minimized;
         }
 
-
+       
         private void RegistroReservas_Load(object sender, EventArgs e)
         {
             ListarClientes();
             ListarVehiculo();
             ListarEmpleado();
         }
-
+       
         public void ListarClientes()
         {
             Reserva mostrar = new Reserva();
@@ -100,19 +100,17 @@ namespace Car
         }
         private void btnGuardarReserva_Click(object sender, EventArgs e)
         {
-            if (operacion == "insertar")
-            {
-                try
-                {
-                    reserva.Id_cliente = Convert.ToInt32(cbxCliente.SelectedValue);
-                    reserva.Id_vehiculo = Convert.ToInt32(cbxVehiculo.SelectedValue);
+            if(operacion == "insertar") { 
+                try {
+                    reserva.Id_cliente= Convert.ToInt32(cbxCliente.SelectedValue);
+                    reserva.Id_vehiculo= Convert.ToInt32(cbxVehiculo.SelectedValue);
                     reserva.Costoestimado = Convert.ToDecimal(txtPrecio.Text);
                     reserva.Id_empleado = Convert.ToInt32(cbxEmpleado.SelectedValue);
                     reserva.Hora = txtHora.Text;
                     reserva.Fecha = dtpFecha.Text;
                     reserva.insertarReserva();
 
-                    MessageBox.Show("Datos de Reserva insertados correctamente");
+                MessageBox.Show("Datos de Reserva insertados correctamente");
                     //reserva.ListarReservas();
                 }
                 catch (Exception m)
@@ -120,7 +118,7 @@ namespace Car
                     MessageBox.Show("No se  insertaron los datos de la reserva" + m);
                 }
             }
-            else if (operacion == "editar")
+            else if(operacion == "editar") 
             {
                 try
                 {
@@ -132,7 +130,7 @@ namespace Car
                     reserva.Fecha = dtpFecha.Text;
                     reserva.Id_reserva = Convert.ToInt32(id_reserva);
                     reserva.editarReserva();
-
+                    
 
                     MessageBox.Show("Datos de Reserva editados correctamente");
 
@@ -144,8 +142,8 @@ namespace Car
                 }
 
             }
-
-
+            
+            
 
         }
 
@@ -155,7 +153,7 @@ namespace Car
             this.txtPrecio.Text = "";
             cbxCliente.SelectedIndex = -1;
             cbxVehiculo.SelectedIndex = -1;
-
+            
         }
 
         private void cbxCliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -163,6 +161,6 @@ namespace Car
             //insertar.insertarReserva(Convert.ToInt32(cbxCliente));
         }
 
-
+        
     }
 }

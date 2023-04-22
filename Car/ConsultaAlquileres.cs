@@ -116,7 +116,7 @@ namespace Car
         private void ConsultaAlquileres_Load(object sender, EventArgs e)
         {
             ListarAlquileres();
-      
+
 
         }
 

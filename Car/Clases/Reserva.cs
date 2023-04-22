@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Car.Clases
 {
-   
+
     class Reserva
     {
         private SqlCommand comando = new SqlCommand();
@@ -33,7 +33,7 @@ namespace Car.Clases
         public int Id_empleado { get => id_empleado; set => id_empleado = value; }
         public string Hora { get => hora; set => hora = value; }
         public string Fecha { get => fecha; set => fecha = value; }
-        
+
 
         //metodos/funciones
 
@@ -48,7 +48,7 @@ namespace Car.Clases
                 SqlDataAdapter adap = new SqlDataAdapter(comando);
                 adap.Fill(listaReservas);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error Consulta de Reserva" + ex);
             }
@@ -60,7 +60,7 @@ namespace Car.Clases
             return listaReservas;
         }
 
-        
+
         public DataTable ListarClientes()
         {
             DataTable tabla = new DataTable();
@@ -114,30 +114,30 @@ namespace Car.Clases
             return tabla;
         }
 
-        
+
 
         public void insertarReserva()
         {
-            
-                comando.Connection= Conexion.Conectar();
-                comando.CommandText = "InsertarReserva";
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.AddWithValue("@id_cliente", id_cliente);
-                comando.Parameters.AddWithValue("@id_vehiculo", id_vehiculo);
-                comando.Parameters.AddWithValue("@costoestimado", costoestimado);
-                comando.Parameters.AddWithValue("@id_empleado", id_empleado);
-                comando.Parameters.AddWithValue("@hora", hora);
-                comando.Parameters.AddWithValue("@fecha", fecha);
-                comando.ExecuteNonQuery();
-                //comando.Parameters.Clear();
-                
-            
+
+            comando.Connection = Conexion.Conectar();
+            comando.CommandText = "InsertarReserva";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@id_cliente", id_cliente);
+            comando.Parameters.AddWithValue("@id_vehiculo", id_vehiculo);
+            comando.Parameters.AddWithValue("@costoestimado", costoestimado);
+            comando.Parameters.AddWithValue("@id_empleado", id_empleado);
+            comando.Parameters.AddWithValue("@hora", hora);
+            comando.Parameters.AddWithValue("@fecha", fecha);
+            comando.ExecuteNonQuery();
+            //comando.Parameters.Clear();
+
+
         }
 
-       public void editarReserva()
+        public void editarReserva()
         {
             comando.Connection = Conexion.Conectar();
-            comando.CommandText = "update reserva set id_cliente="+id_cliente+",id_vehiculo="+id_vehiculo+",costoestimado="+costoestimado+", id_empleado="+id_empleado+",hora='"+hora+"',fecha='"+fecha+"' where id_reserva="+id_reserva+"";
+            comando.CommandText = "update reserva set id_cliente=" + id_cliente + ",id_vehiculo=" + id_vehiculo + ",costoestimado=" + costoestimado + ", id_empleado=" + id_empleado + ",hora='" + hora + "',fecha='" + fecha + "' where id_reserva=" + id_reserva + "";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             Conexion.Conectar().Close();
@@ -146,7 +146,7 @@ namespace Car.Clases
         public void eliminarReserva()
         {
             comando.Connection = Conexion.Conectar();
-            comando.CommandText = "delete reserva where id_reserva="+id_reserva;
+            comando.CommandText = "delete reserva where id_reserva=" + id_reserva;
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             Conexion.Conectar().Close();

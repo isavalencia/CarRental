@@ -30,7 +30,7 @@ namespace Car.Clases
         public int Id_vehiculo { get => id_vehiculo; set => id_vehiculo = value; }
         public string Inicio_alquiler { get => inicio_alquiler; set => inicio_alquiler = value; }
         public string Finalizacion_alquiler { get => finalizacion_alquiler; set => finalizacion_alquiler = value; }
-       
+
 
         public DataTable ListarClientes()
         {
@@ -133,6 +133,26 @@ namespace Car.Clases
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             Conexion.Conectar().Close();
+        }
+
+        public DataTable getReportAlquileres()
+        {
+            
+            comando.Connection = Conexion.Conectar();
+            comando.CommandText = "select a.id_alquiler,cl.nombres,cl.apellidos,v.placa,v.tipo_vehiculo,v.marca,a.inicio_alquiler,a.finalizacion_alquiler,c.dias,c.precio,sum(c.dias *c.precio) as total_alquiler,cl.telefono,a.estado " +
+                                  "from alquileres a " +
+                                  "inner join contratos c on c.id_alquiler = a.id_alquiler" +
+                                  "inner join vehiculo v on v.id_vehiculo = c.id_vehiculo" +
+                                  "inner join clientes cl on cl.id_cliente = a.id_cliente " +
+                                  "group by a.id_alquiler,cl.nombres,cl.apellidos,v.placa,v.tipo_vehiculo,v.marca,a.inicio_alquiler,a.finalizacion_alquiler,c.dias,c.precio,cl.telefono,a.estado" +
+                                  "order by a.id_alquiler";
+            comando.CommandType = CommandType.Text;
+            var leer = comando.ExecuteReader();
+            var tabla = new DataTable();
+            tabla.Load(leer);
+            leer.Dispose();
+
+            return tabla;
         }
 
     }

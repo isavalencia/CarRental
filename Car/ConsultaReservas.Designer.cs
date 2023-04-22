@@ -40,6 +40,7 @@ namespace Car
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnReporteReserva = new System.Windows.Forms.Button();
             this.panelTituloConsultaReservas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -176,11 +177,28 @@ namespace Car
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
+            // btnReporteReserva
+            // 
+            this.btnReporteReserva.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnReporteReserva.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporteReserva.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnReporteReserva.Image = ((System.Drawing.Image)(resources.GetObject("btnReporteReserva.Image")));
+            this.btnReporteReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporteReserva.Location = new System.Drawing.Point(917, 484);
+            this.btnReporteReserva.Name = "btnReporteReserva";
+            this.btnReporteReserva.Size = new System.Drawing.Size(146, 46);
+            this.btnReporteReserva.TabIndex = 77;
+            this.btnReporteReserva.Text = "Reporte";
+            this.btnReporteReserva.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReporteReserva.UseVisualStyleBackColor = false;
+            this.btnReporteReserva.Click += new System.EventHandler(this.btnReporteReserva_Click);
+            // 
             // ConsultaReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1075, 542);
+            this.Controls.Add(this.btnReporteReserva);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnEliminar);
@@ -212,5 +230,6 @@ namespace Car
         private System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnReporteReserva;
     }
 }

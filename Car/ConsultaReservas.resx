@@ -195,25 +195,6 @@
         YII=
 </value>
   </data>
-  <data name="btnReporteReserva.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAALEAAACxAcYtSY0AAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAC2klEQVRIS52W3UtTcRzG/Ru8EC+D6VZkNV1sImlz2V50KZSpkYbZTK1B1kRFLbQmXZRlFClZSqDd
-        emF78aX50mYSzIYz32j4Oplbm1Q2wYSn7XCOzO2sHXvgc7EDv+dzzvd3ztmJCkxMTIyYzWYvcrlcRySi
-        o6O9nHhOObmUWeLi4iybnk1se7cjIs+UQyQ88+dAEg6HM+Nf3N7WDqlECnmWPCyxsbEY7PsAqVi2y1hC
-        CfLz82EcNsE6OR0WcYYYBu0IxgaMkEkyd1gslpKsCR9KUFRUhKePW9HR1kHLmOEjJGIphjQGGIfGMdrv
-        +50h2Yl4JZRgdmYW6vtqNDU20TLxaQLN6mYoikvx+mUn3vh49bwDRw4f3fXdJNfJutBQAiZs/dpCV2cX
-        6uvq92iob0BCQoKTrAsNJWhpfQR+6knwUpNwTHAc83PzmDRPQiQS7SM9PR1CoZBAo9HA7XIjOTnZRdaF
-        hhLkXjqPd19foNv2Frk1l6HT6rAwvwD1A3VYzGYzPN89EAgEDrIuNP8SuJwuaN5rwrK2usZcoKq+jTRZ
-        ClLlpxB/gk2Mx388EowF/wtjwfDgEKrKK6C6WoLa0jI4N5ywTlmhUqnCYjKamAsKc3JgLlNi6toNVCYJ
-        oNfpI+6Bfc1OCGqra61kXWgCBe6au/h5pw6NKaeJTZ62TtOeOcW4aZwQ6LX6UbIuNJSg5GIenkiy8CxD
-        hnMsNgwfDLQzD4bxiJYWl9DT3UPQ29tLPLXBZXQwFqzb1/dm6z97728vHA7HvpkHs7K8wlygKC7AvVsi
-        PFSlISvtEEaGR2D7ZqN9giksXyzMBYUF2XBbqoC5SrRUpRCbTPcuCmSgf+BgAtuYEp7PFVAr+YTAfzwS
-        jAU6bZ9vTHlQXMnGTcUFYv7BZXREFPj/9D1uD+3iSPhvBPuqHTweb5msC43vs+Us08+WQBK5iRt8Pv8H
-        L4m3yWaxZWSdL1FRfwEFRY/Zce2n2gAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
